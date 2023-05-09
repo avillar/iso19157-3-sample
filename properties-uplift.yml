@@ -1,7 +1,6 @@
-input-filter:
-  csv:
-
 transform:
+  # Keep data only
+  - '.data'
   # Set fields with empty or '-' value to null
   - 'walk(if type == "object" then with_entries(if (.value | test("^\\s*-?\\s*$")) then .value = null else . end) else . end)'
   # Remove colons in field names with spaces

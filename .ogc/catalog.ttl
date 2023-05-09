@@ -1,0 +1,19 @@
+@prefix dcfg: <http://www.example.org/ogc/domain-cfg#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix profiles: <http://www.opengis.net/def/metamodel/profiles/> .
+
+_:iso19157-3-sample a dcat:Catalog ;
+  dct:title "ISO19157-3 Sample" ;
+  dcat:dataset _:properties-uplift ;
+.
+
+_:properties-uplift a dcat:Dataset, dcfg:UpliftConfiguration ;
+  dct:description "ISO19157-3 Properties uplift" ;
+  dcfg:glob "**/*.csv.json" ;
+  dcfg:hasUpliftDefinition [
+    dcfg:order 1 ;
+    dcfg:file "properties-uplift.yml" ;
+  ] ;
+.
