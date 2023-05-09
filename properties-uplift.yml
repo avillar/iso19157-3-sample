@@ -5,6 +5,14 @@ transform:
   - 'walk(if type == "object" then with_entries(if (.value | test("^\\s*-?\\s*$")) then .value = null else . end) else . end)'
   # Remove colons in field names with spaces
   - 'walk(if type == "object" then with_entries(.key |= sub(" ?: ?"; " ")) else . end)'
+  # Add ConceptScheme
+  - |
+    {
+      "@id": "https://standards.isotc211.org/19157/-1/1/req/content/qualityMeasure",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "ISO19157-3 quality measures",
+      "concepts": .
+    }
 
 context:
   $:
@@ -25,3 +33,5 @@ context:
       '@type': '@id'
       '@context':
         '@base': http://www.opengis.net/def/status/
+    concepts:
+      '@reverse': skos:inScheme
