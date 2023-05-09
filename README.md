@@ -16,5 +16,6 @@ containing ISO19157-3 properties.
 ## See also
 
 - [OGC Naming Authority tools (ogc-na)](https://opengeospatial.github.io/ogc-na-tools/)
+  - [Domain configuration and uplift context examples](https://opengeospatial.github.io/ogc-na-tools/examples/)
   - [ingest_json reference](https://opengeospatial.github.io/ogc-na-tools/reference/ogc/na/ingest_json/)
   - [CSV input filter configuration](https://opengeospatial.github.io/ogc-na-tools/reference/ogc/na/input_filters/csv/)
