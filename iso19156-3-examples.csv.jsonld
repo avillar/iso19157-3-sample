@@ -1,26 +1,8 @@
 {
-  "@context": {
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "dct": "http://purl.org/dc/terms/",
-    "policy": "http://www.opengis.net/def/metamodel/ogc-na/",
-    "ID": "@id",
-    "Name": "skos:prefLabel",
-    "Alias": "skos:altLabel",
-    "Definition": "skos:definition",
-    "Text description": "dct:description",
-    "Source reference": "dct:source",
-    "Example Text Description": "skos:example",
-    "Key": "skos:editorialNote",
-    "Version": "dct:version",
-    "Status": {
-      "@id": "policy:status",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://www.opengis.net/def/status/"
-      }
-    }
-  },
-  "@graph": [
+  "@id": "https://standards.isotc211.org/19157/-1/1/req/content/qualityMeasure",
+  "@type": "skos:ConceptScheme",
+  "skos:prefLabel": "ISO19157-3 quality measures",
+  "concepts": [
     {
       "Name": "number of duplicate feature instances",
       "Alias": null,
@@ -263,5 +245,29 @@
       "Status": "valid",
       "ID": "https://standards.isotc211.org/19157/-1/1/req/content/qualityMeasure/102"
     }
-  ]
+  ],
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "policy": "http://www.opengis.net/def/metamodel/ogc-na/",
+    "ID": "@id",
+    "Name": "skos:prefLabel",
+    "Alias": "skos:altLabel",
+    "Definition": "skos:definition",
+    "Text description": "dct:description",
+    "Source reference": "dct:source",
+    "Example Text Description": "skos:example",
+    "Key": "skos:editorialNote",
+    "Version": "dct:version",
+    "Status": {
+      "@id": "policy:status",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://www.opengis.net/def/status/"
+      }
+    },
+    "concepts": {
+      "@reverse": "skos:inScheme"
+    }
+  }
 }
