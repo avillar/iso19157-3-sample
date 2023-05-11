@@ -6,7 +6,9 @@
 
 _:iso19157-3-sample a dcat:Catalog ;
   dct:title "ISO19157-3 Sample" ;
-  dcat:dataset _:properties-uplift ;
+  dcat:dataset _:properties-uplift, _:examples ;
+  dcfg:hasProfileSource "sparql:http://defs-dev.opengis.net:8080/rdf4j-server/repositories/profiles" ;
+  dcfg:ignoreProfileArtifactErrors true ;
 .
 
 _:properties-uplift a dcat:Dataset, dcfg:UpliftConfiguration ;
@@ -16,4 +18,11 @@ _:properties-uplift a dcat:Dataset, dcfg:UpliftConfiguration ;
     dcfg:order 1 ;
     dcfg:file "properties-uplift.yml" ;
   ] ;
+.
+
+_:examples a dcat:Dataset, dcfg:DomainConfiguration ;
+  dct:identifier "examples" ;
+  dct:description "Entailment and validation for examples" ;
+  dcfg:glob "*.ttl" ;
+  dct:conformsTo profiles:skos_shared, profiles:skos_conceptscheme ;
 .
