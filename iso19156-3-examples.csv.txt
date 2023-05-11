@@ -1,0 +1,11 @@
+=== skos_shared (http://www.opengis.net/def/metamodel/profiles/skos_shared) ===
+Validation Report
+Conforms: True
+
+=== conceptscheme (http://www.opengis.net/def/metamodel/profiles/skos_conceptscheme) ===
+Validation Report
+Conforms: True
+
+=== skos (http://www.w3.org/2004/02/skos/core) ===
+Validation Report
+Conforms: True
