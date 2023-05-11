@@ -29,6 +29,7 @@ jobs:
           done
           python -m ogc.na.ingest_json --batch --use-git-status --skip-on-missing-context \
             --json-ld --ttl --work-dir . --domain-config .ogc/catalog.ttl
+          python -m ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status
       - name: Add and commit
         uses: EndBug/add-and-commit@v9
         with:
