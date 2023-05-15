@@ -15,7 +15,7 @@ transform:
     }
 
 types:
-  '$.concepts.*': skos:Concept
+  '$.concepts[*]': skos:Concept
 
 context:
   $:
