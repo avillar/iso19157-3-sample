@@ -24,6 +24,6 @@ _:properties-uplift a dcat:Dataset, dcfg:UpliftConfiguration ;
 _:examples a dcat:Dataset, dcfg:DomainConfiguration ;
   dct:identifier "examples" ;
   dct:description "Entailment and validation for examples" ;
-  dcfg:glob "**/*.ttl" ;
+  dcfg:glob "*.ttl" ;
   dct:conformsTo profiles:skos_shared, profiles:skos_conceptscheme, profiles:skos_conceptscheme_ogc, profiles:vocprez_ogc ;
 .
