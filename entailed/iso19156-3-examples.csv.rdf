@@ -1,295 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:policy="http://www.opengis.net/def/metamodel/ogc-na/"
    xmlns:prov="http://www.w3.org/ns/prov#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb1">
-    <prov:wasAssociatedWith rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb3"/>
-    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T07:22:46.410222</prov:endedAtTime>
-    <prov:used rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb2"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <prov:wasInformedBy rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb4"/>
-    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T07:22:45.955053</prov:startedAtTime>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/11">
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:example>Search for surfaces that are not allowed to overlap according to the conceptual schema. In this case, forest and built-up-area are not allowed to overlap</skos:example>
-    <skos:definition>total number of erroneous overlaps within the data</skos:definition>
-    <dct:description>Which surfaces may overlap and which shall not is application dependent. Not all overlapping surfaces are necessarily erroneous. When reporting this data quality measure, the types of feature classes corresponding to the illegal overlapping surfaces shall be reported as well. See also: https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/204</dct:description>
-    <skos:prefLabel>number of invalid overlaps of surfaces</skos:prefLabel>
-    <skos:altLabel>overlapping surfaces</skos:altLabel>
-    <dct:version>1.0</dct:version>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/59">
-    <dct:description>The value indicates the probability for the true value of being within a lower and the upper limit of the interval.</dct:description>
-    <skos:definition>half length of the interval defined by an upper and a lower limit, in which the true value for the time instance lies with probability 99,8 %</skos:definition>
-    <dct:version>1.0</dct:version>
-    <skos:prefLabel>time accuracy at 99,8 % significance level</skos:prefLabel>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N3935ffbe5ea24347bb6bcf1f00de6d1d">
+  <rdf:Description rdf:nodeID="N3bc3ef86563e46cf8d94d1d50c3edd78">
     <rdfs:seeAlso rdf:resource="https://github.com/opengeospatial/ogc-na-tools"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
     <rdfs:label>OGC-NA tools</rdfs:label>
     <rdfs:comment>ogc.na.update_vocabs version 0.0.0</rdfs:comment>
-    <dct:hasVersion>0.0.0</dct:hasVersion>
+    <dcterms:hasVersion>0.0.0</dcterms:hasVersion>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/entailed/iso19156-3-examples.csv.rdf">
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:format>application/rdf+xml</dcterms:format>
+    <prov:wasGeneratedBy rdf:nodeID="N63d84ca278604a5196930b3a8304ff4d"/>
+    <prov:wasAttributedTo rdf:nodeID="N3bc3ef86563e46cf8d94d1d50c3edd78"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/21">
+    <skos:definition>number of faulty point-curve connections in the dataset</skos:definition>
+    <dcterms:description>A point-curve connection exists where different curves touch. These curves have an intrinsic topological relationship that shall reflect the true constellation. If the point-curve connection contradicts the universe of discourse, the point-curve connection is faulty with respect to this data quality measure. The data quality measure counts the number of errors of this kind.</dcterms:description>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <dct:version>1.0</dct:version>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
     <skos:altLabel>extraneous nodes</skos:altLabel>
     <skos:example>Count the number of wrong curve connections - e.g. two-point curve connections exist where only one should be present, or count all curves with more than the threshold value of 500 vertices (in which system automatically places point-curve based on vertices limitation built into software code where no spatial justification for point-curve exists).</skos:example>
-    <skos:definition>number of faulty point-curve connections in the dataset</skos:definition>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
     <skos:prefLabel>number of faulty point-curve connections</skos:prefLabel>
-    <dct:description>A point-curve connection exists where different curves touch. These curves have an intrinsic topological relationship that shall reflect the true constellation. If the point-curve connection contradicts the universe of discourse, the point-curve connection is faulty with respect to this data quality measure. The data quality measure counts the number of errors of this kind.</dct:description>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4294531b7d764701bba83c669c3c1843">
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/102">
-    <skos:definition>number of data product specification requirements that are not fulfilled by the current product/dataset</skos:definition>
     <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:prefLabel>data product specification fail count</skos:prefLabel>
-    <dct:version>1.0</dct:version>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb2">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-    <dct:format>application/json</dct:format>
-    <rdfs:seeAlso rdf:resource="file:///home/runner/work/iso19157-3-sample/iso19157-3-sample/iso19156-3-examples.csv.json"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N718b20dd50f54fde82d584065077612e">
-    <prov:used rdf:nodeID="Nb9cecbb56e31425295fdb78f0bdd22ac"/>
-    <prov:used rdf:nodeID="N236d67a03eb54724b1daf0ff171d49be"/>
-    <prov:used rdf:nodeID="Nce9a582f17fa4538ac8bc7b3cf8e9ef4"/>
-    <prov:used rdf:nodeID="Nadf5266d289147f9876f1ea8d9c40f14"/>
-    <prov:used rdf:nodeID="Nb3f9b3c7a6954402bcf81071e6ec5c5c"/>
-    <prov:used rdf:nodeID="Nfe9010b253e543fd81f425b76ef802f8"/>
-    <prov:used rdf:nodeID="N1e58764afe3845b084a871b6cc609a1d"/>
-    <rdfs:comment>python ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status --base-uri https://raw.githubusercontent.com/avillar/iso19157-3-sample/master --update --graph-store http://defs-dev.opengis.net:8061/fuseki-hosted/data</rdfs:comment>
+  <rdf:Description rdf:nodeID="N63d84ca278604a5196930b3a8304ff4d">
+    <prov:used rdf:nodeID="N72fc8a88abb64c3aab934a1efc7abbf8"/>
+    <prov:used rdf:nodeID="N763a8af703294022a13264c2928aa51d"/>
+    <prov:used rdf:nodeID="N425f358a23d64ad28e715fb7c3aee65b"/>
+    <prov:used rdf:nodeID="N96156f3b2eab4e5e99fc6c2fd9e476d9"/>
+    <prov:used rdf:nodeID="N912cab78d44a46a09ba8f21099bfcf62"/>
+    <prov:used rdf:nodeID="N5d2ebd202143479d89e2cdd539f659b5"/>
+    <prov:used rdf:nodeID="N674bc51f3550419db251555903404eb6"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T07:22:47.430153</prov:startedAtTime>
-    <prov:wasInformedBy rdf:nodeID="Nad798fe52e06416d9bb015335dd0e3db"/>
-    <prov:wasAssociatedWith rdf:nodeID="N68b03397c0424781896f43c535fd2c84"/>
-    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T07:22:50.112130</prov:endedAtTime>
     <rdfs:label>Entailment and validation</rdfs:label>
+    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T11:43:58.635098</prov:startedAtTime>
+    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T11:44:01.547718</prov:endedAtTime>
+    <prov:wasInformedBy rdf:nodeID="N3b2339a2924747529f5ffcb192e59575"/>
+    <rdfs:comment>python ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status --base-uri https://raw.githubusercontent.com/avillar/iso19157-3-sample/master --update --graph-store http://defs-dev.opengis.net:8061/fuseki-hosted/data</rdfs:comment>
+    <prov:wasAssociatedWith rdf:nodeID="N3bc3ef86563e46cf8d94d1d50c3edd78"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/101">
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <dct:description>The measure will take the  value true if all the requirements in the referred data product specification are fulfilled</dct:description>
-    <dct:version>1.0</dct:version>
+  <rdf:Description rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b2">
+    <rdfs:seeAlso rdf:resource="file:///home/runner/work/iso19157-3-sample/iso19157-3-sample/iso19156-3-examples.csv.json"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:format>application/json</dcterms:format>
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/entailed/iso19156-3-examples.csv.ttl">
+    <prov:wasGeneratedBy rdf:nodeID="N5d69156568bd437fae04562298902b3d"/>
+    <dcterms:format>text/turtle</dcterms:format>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <prov:wasAttributedTo rdf:nodeID="N3f3c3d4485d640fdb601b8204a7ecbd4"/>
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/12">
+    <skos:example>0,02 (in a test area there is 227 objects coded as living houses in the dataset but in the universe of discourse there are 231 objects that should be coded as living houses, 4 of them was coded as farm buildings)</skos:example>
+    <skos:definition>number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset</skos:definition>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/draft"/>
     <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:prefLabel>data product specification passed</skos:prefLabel>
+    <dcterms:description>The value indicates number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset</dcterms:description>
+    <skos:prefLabel>non-compliance rate with respect to the rules of the conceptual schema</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:definition>indication that all requirements in the referred data product specification are fulfilled</skos:definition>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
   </rdf:Description>
   <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/119">
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:prefLabel>physical structure conflicts</skos:prefLabel>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/retired"/>
-    <dct:version>1.0</dct:version>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <dct:description>The value true indicates physical structure conflict</dct:description>
     <skos:definition>indication that items are stored in conflict with the physical structure of the dataset</skos:definition>
-    <skos:example>True (the dataset is stored in wrong file format, a shape file instead of gml)</skos:example>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/">
-    <skos:definition>Collection hierarchy for this ConceptScheme</skos:definition>
-    <dct:provenance>Generated by the OGC Definitions Server to support integration of the elements of this ConceptScheme into bigger collections. ogc_skos_profile_entailements.ttl</dct:provenance>
     <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:prefLabel>Concepts in ISO19157-3 quality measures</skos:prefLabel>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:example>True (the dataset is stored in wrong file format, a shape file instead of gml)</skos:example>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/retired"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:description>The value true indicates physical structure conflict</dcterms:description>
+    <skos:prefLabel>physical structure conflicts</skos:prefLabel>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nce9a582f17fa4538ac8bc7b3cf8e9ef4">
-    <dct:format>text/turtle</dct:format>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/101">
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <dcterms:description>The measure will take the  value true if all the requirements in the referred data product specification are fulfilled</dcterms:description>
+    <skos:prefLabel>data product specification passed</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+    <skos:definition>indication that all requirements in the referred data product specification are fulfilled</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1fb6702b91c849f8accc72608f7d9721">
     <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/iso19156-3-examples.csv.ttl"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1df8bb42bb7d499f8641f404ff59a30a">
     <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/vocprez.shapes.ttl"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf0833c72973f40248e925a6b51700db1">
-    <prov:used rdf:nodeID="N289b4304840f4ad4bd1f0960a93c01ff"/>
-    <prov:used rdf:nodeID="N5e9ea5b9e0bd495eb3c39cf155985513"/>
-    <prov:used rdf:nodeID="N90b26d7bd1344957a554e63fb92c7713"/>
-    <prov:used rdf:nodeID="Nc0abd67d6d554d99a000c292923d9de5"/>
-    <prov:used rdf:nodeID="N4294531b7d764701bba83c669c3c1843"/>
-    <prov:used rdf:nodeID="Nb9f11867259343ca96ff7334c0146f36"/>
-    <prov:used rdf:nodeID="N1df8bb42bb7d499f8641f404ff59a30a"/>
+  <rdf:Description rdf:nodeID="N5d69156568bd437fae04562298902b3d">
+    <prov:used rdf:nodeID="Ne67e7322dca44017bf2ef0ae0dc05387"/>
+    <prov:used rdf:nodeID="N1fb6702b91c849f8accc72608f7d9721"/>
+    <prov:used rdf:nodeID="N46f0785ba5c3473ebd0f217fd9d31b6b"/>
+    <prov:used rdf:nodeID="N231893660b874b24b941bf265cba6b73"/>
+    <prov:used rdf:nodeID="N1c14d5e925d540aea52dd56eed80a1cb"/>
+    <prov:used rdf:nodeID="N6d833a36599340eb9c082ec710d1c7f2"/>
+    <prov:used rdf:nodeID="N7eee0ca3c4a5432a9d4f6b96700a1938"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T11:44:01.528354</prov:endedAtTime>
     <rdfs:label>Entailment and validation</rdfs:label>
-    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T07:22:47.430153</prov:startedAtTime>
-    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T07:22:50.158246</prov:endedAtTime>
-    <prov:wasInformedBy rdf:nodeID="N4b406c1e4a8b434ea85a52700219c9f2"/>
+    <prov:wasAssociatedWith rdf:nodeID="N3f3c3d4485d640fdb601b8204a7ecbd4"/>
+    <prov:wasInformedBy rdf:nodeID="Nf5581bd89b7f48d8991486bbd15506f2"/>
+    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T11:43:58.635098</prov:startedAtTime>
     <rdfs:comment>python ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status --base-uri https://raw.githubusercontent.com/avillar/iso19157-3-sample/master --update --graph-store http://defs-dev.opengis.net:8061/fuseki-hosted/data</rdfs:comment>
-    <prov:wasAssociatedWith rdf:nodeID="N3935ffbe5ea24347bb6bcf1f00de6d1d"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb3">
-    <dct:hasVersion>0.0.0</dct:hasVersion>
-    <rdfs:seeAlso rdf:resource="https://github.com/opengeospatial/ogc-na-tools"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
-    <rdfs:label>OGC-NA tools</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nb232b26aab994ae881f91439bdf25aceb4">
-    <dct:identifier>6daf785c-2736-40e6-b1bc-b426861a76ed</dct:identifier>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/62">
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <skos:prefLabel>misclassification matrix</skos:prefLabel>
+    <skos:definition>matrix that indicates the number of items of class (i) classified as class (j)</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:altLabel>confusion matrix</skos:altLabel>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+    <dcterms:description>The misclassification matrix (MCM) is a quadratic matrix with n columns and n rows. n denotes the number of classes under consideration.
+MCM (i,j) = [# items of class (i) classified as class (j)]
+The diagonal elements of the misclassification matrix contain the correctly classified items, and the off diagonal elements contain the number of misclassification errors.</dcterms:description>
   </rdf:Description>
   <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure">
     <policy:collectionView rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     <skos:prefLabel>ISO19157-3 quality measures</skos:prefLabel>
-    <dct:source rdf:resource="http://www.opengis.net/def/entities/bodies/ogcna"/>
     <skos:definition>ISO19157-3 quality measures</skos:definition>
+    <dcterms:source rdf:resource="http://www.opengis.net/def/entities/bodies/ogcna"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/12">
-    <skos:prefLabel>non-compliance rate with respect to the rules of the conceptual schema</skos:prefLabel>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/draft"/>
-    <dct:description>The value indicates number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset</dct:description>
-    <skos:definition>number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset</skos:definition>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <dct:version>1.0</dct:version>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:example>0,02 (in a test area there is 227 objects coded as living houses in the dataset but in the universe of discourse there are 231 objects that should be coded as living houses, 4 of them was coded as farm buildings)</skos:example>
+  <rdf:Description rdf:nodeID="N96156f3b2eab4e5e99fc6c2fd9e476d9">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/14">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>value domain non-conformance</skos:prefLabel>
-    <skos:example>True – a feature with attribute colour has the value ‘blau’, but it does not exist in the specified value domain: red, green, blue, yellow</skos:example>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <dct:version>1.0</dct:version>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
     <skos:definition>indication of if an item is not in conformance with its value domain</skos:definition>
-    <dct:description>The value true indicates that an item is not in conformance with its value domain)</dct:description>
+    <skos:example>True – a feature with attribute colour has the value ‘blau’, but it does not exist in the specified value domain: red, green, blue, yellow</skos:example>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+    <skos:prefLabel>value domain non-conformance</skos:prefLabel>
+    <dcterms:description>The value true indicates that an item is not in conformance with its value domain)</dcterms:description>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46f0785ba5c3473ebd0f217fd9d31b6b">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/iso19156-3-examples.csv.ttl"/>
+    <dcterms:format>text/turtle</dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/11">
+    <dcterms:description>Which surfaces may overlap and which shall not is application dependent. Not all overlapping surfaces are necessarily erroneous. When reporting this data quality measure, the types of feature classes corresponding to the illegal overlapping surfaces shall be reported as well. See also: https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/204</dcterms:description>
+    <skos:definition>total number of erroneous overlaps within the data</skos:definition>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <skos:altLabel>overlapping surfaces</skos:altLabel>
+    <skos:prefLabel>number of invalid overlaps of surfaces</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:example>Search for surfaces that are not allowed to overlap according to the conceptual schema. In this case, forest and built-up-area are not allowed to overlap</skos:example>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b3">
+    <rdfs:label>OGC-NA tools</rdfs:label>
+    <dcterms:hasVersion>0.0.0</dcterms:hasVersion>
+    <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdfs:seeAlso rdf:resource="https://github.com/opengeospatial/ogc-na-tools"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b1">
+    <prov:wasInformedBy rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b4"/>
+    <prov:wasAssociatedWith rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b3"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T11:43:57.671116</prov:endedAtTime>
+    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-16T11:43:57.221475</prov:startedAtTime>
+    <prov:used rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7eee0ca3c4a5432a9d4f6b96700a1938">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne67e7322dca44017bf2ef0ae0dc05387">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skos_vocprez.shapes.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/4">
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+    <dcterms:description>count of all items in the data that are incorrectly extracted with duplicate geometries</dcterms:description>
+    <dcterms:source>ISO/TS 19138 (modified)</dcterms:source>
+    <skos:prefLabel>number of duplicate feature instances</skos:prefLabel>
+    <skos:example>Features with identical attribution and identical coordinates representing the same real object, for example: two (or more) points collected on top of each other, two (or more) curves collected on top of each other, or two (or more) surfaces collected on top of each other.</skos:example>
+    <skos:definition>total number of exact duplications of feature instances within the data</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N231893660b874b24b941bf265cba6b73">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N674bc51f3550419db251555903404eb6">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N72fc8a88abb64c3aab934a1efc7abbf8">
+    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/iso19156-3-examples.csv.ttl"/>
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:format>text/turtle</dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d833a36599340eb9c082ec710d1c7f2">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3f3c3d4485d640fdb601b8204a7ecbd4">
+    <rdfs:seeAlso rdf:resource="https://github.com/opengeospatial/ogc-na-tools"/>
+    <rdfs:label>OGC-NA tools</rdfs:label>
+    <dcterms:hasVersion>0.0.0</dcterms:hasVersion>
+    <rdfs:comment>ogc.na.update_vocabs version 0.0.0</rdfs:comment>
+    <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/102">
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+    <skos:definition>number of data product specification requirements that are not fulfilled by the current product/dataset</skos:definition>
+    <skos:prefLabel>data product specification fail count</skos:prefLabel>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n14d18a5a887048d79a82bdaa5490e277b4">
+    <dcterms:identifier>cb7c5d96-3d57-47c8-8c6d-5ada21b9845e</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/47">
+    <skos:prefLabel>root mean square error of planimetry</skos:prefLabel>
+    <skos:altLabel>RMSEP</skos:altLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:editorialNote>s =  RMSEP, linear root mean square error of planimetry</skos:editorialNote>
+    <dcterms:hasVersion>2.0</dcterms:hasVersion>
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <skos:definition>radius of a circle around the given point, in which the true value lies with probability P</skos:definition>
+    <dcterms:description>The true values of the observed coordinates X and Y are known as xt and yt. From this the estimator</dcterms:description>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/superseded"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N425f358a23d64ad28e715fb7c3aee65b">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skos_vocprez.shapes.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1c14d5e925d540aea52dd56eed80a1cb">
+    <dcterms:format>text/turtle</dcterms:format>
+    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/.ogc/catalog.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d2ebd202143479d89e2cdd539f659b5">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/vocprez.shapes.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/59">
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
+    <dcterms:description>The value indicates the probability for the true value of being within a lower and the upper limit of the interval.</dcterms:description>
+    <skos:definition>half length of the interval defined by an upper and a lower limit, in which the true value for the time instance lies with probability 99,8 %</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:hasVersion>1.0</dcterms:hasVersion>
+    <skos:prefLabel>time accuracy at 99,8 % significance level</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N912cab78d44a46a09ba8f21099bfcf62">
+    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N763a8af703294022a13264c2928aa51d">
+    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/.ogc/catalog.ttl"/>
+    <dcterms:hasVersion>git:e494f473b6f607d16bc1af947c06c0a85287c1cc</dcterms:hasVersion>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:format>text/turtle</dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/">
+    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
+    <skos:prefLabel>Concepts in ISO19157-3 quality measures</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:definition>Collection hierarchy for this ConceptScheme</skos:definition>
+    <dcterms:provenance>Generated by the OGC Definitions Server to support integration of the elements of this ConceptScheme into bigger collections. ogc_skos_profile_entailements.ttl</dcterms:provenance>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b2339a2924747529f5ffcb192e59575">
+    <dcterms:identifier>7a0be2ae-8343-42ba-9eae-df9c277e348a</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf5581bd89b7f48d8991486bbd15506f2">
+    <dcterms:identifier>7a0be2ae-8343-42ba-9eae-df9c277e348a</dcterms:identifier>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.opengis.net/def/entities/bodies/ogcna">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N90b26d7bd1344957a554e63fb92c7713">
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skos_vocprez.shapes.ttl"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N236d67a03eb54724b1daf0ff171d49be">
-    <dct:format>text/turtle</dct:format>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/.ogc/catalog.ttl"/>
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/entailed/iso19156-3-examples.csv.rdf">
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <dct:format>application/rdf+xml</dct:format>
-    <prov:wasGeneratedBy rdf:nodeID="Nf0833c72973f40248e925a6b51700db1"/>
-    <prov:wasAttributedTo rdf:nodeID="N3935ffbe5ea24347bb6bcf1f00de6d1d"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/47">
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <dct:version>2.0</dct:version>
-    <skos:definition>radius of a circle around the given point, in which the true value lies with probability P</skos:definition>
-    <skos:altLabel>RMSEP</skos:altLabel>
-    <dct:description>The true values of the observed coordinates X and Y are known as xt and yt. From this the estimator</dct:description>
-    <skos:editorialNote>s =  RMSEP, linear root mean square error of planimetry</skos:editorialNote>
-    <skos:prefLabel>root mean square error of planimetry</skos:prefLabel>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/superseded"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N68b03397c0424781896f43c535fd2c84">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
-    <rdfs:comment>ogc.na.update_vocabs version 0.0.0</rdfs:comment>
-    <rdfs:seeAlso rdf:resource="https://github.com/opengeospatial/ogc-na-tools"/>
-    <rdfs:label>OGC-NA tools</rdfs:label>
-    <dct:hasVersion>0.0.0</dct:hasVersion>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfe9010b253e543fd81f425b76ef802f8">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/4">
-    <skos:definition>total number of exact duplications of feature instances within the data</skos:definition>
-    <dct:version>1.0</dct:version>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <dct:source>ISO/TS 19138 (modified)</dct:source>
-    <skos:prefLabel>number of duplicate feature instances</skos:prefLabel>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <dct:description>count of all items in the data that are incorrectly extracted with duplicate geometries</dct:description>
-    <skos:example>Features with identical attribution and identical coordinates representing the same real object, for example: two (or more) points collected on top of each other, two (or more) curves collected on top of each other, or two (or more) surfaces collected on top of each other.</skos:example>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/62">
-    <skos:prefLabel>misclassification matrix</skos:prefLabel>
-    <dct:description>The misclassification matrix (MCM) is a quadratic matrix with n columns and n rows. n denotes the number of classes under consideration.
-MCM (i,j) = [# items of class (i) classified as class (j)]
-The diagonal elements of the misclassification matrix contain the correctly classified items, and the off diagonal elements contain the number of misclassification errors.</dct:description>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:definition>matrix that indicates the number of items of class (i) classified as class (j)</skos:definition>
-    <policy:status rdf:resource="http://www.opengis.net/def/status/valid"/>
-    <skos:inScheme rdf:resource="https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure"/>
-    <skos:altLabel>confusion matrix</skos:altLabel>
-    <dct:version>1.0</dct:version>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nad798fe52e06416d9bb015335dd0e3db">
-    <dct:identifier>2df047f4-4f60-4d5c-befc-1381899891ed</dct:identifier>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc0abd67d6d554d99a000c292923d9de5">
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb9cecbb56e31425295fdb78f0bdd22ac">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/vocprez.shapes.ttl"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb3f9b3c7a6954402bcf81071e6ec5c5c">
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/skos_vocprez.shapes.ttl"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1e58764afe3845b084a871b6cc609a1d">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/entailed/iso19156-3-examples.csv.ttl">
-    <prov:wasGeneratedBy rdf:nodeID="N718b20dd50f54fde82d584065077612e"/>
-    <prov:wasAttributedTo rdf:nodeID="N68b03397c0424781896f43c535fd2c84"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <dct:format>text/turtle</dct:format>
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5e9ea5b9e0bd495eb3c39cf155985513">
-    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/.ogc/catalog.ttl"/>
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <dct:format>text/turtle</dct:format>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N289b4304840f4ad4bd1f0960a93c01ff">
-    <rdfs:seeAlso rdf:resource="https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/iso19156-3-examples.csv.ttl"/>
-    <dct:hasVersion>git:9ebe39c85a51ec894353b384ec94d72843a4a642</dct:hasVersion>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <dct:format>text/turtle</dct:format>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nadf5266d289147f9876f1ea8d9c40f14">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb9f11867259343ca96ff7334c0146f36">
-    <rdfs:seeAlso rdf:resource="http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4b406c1e4a8b434ea85a52700219c9f2">
-    <dct:identifier>2df047f4-4f60-4d5c-befc-1381899891ed</dct:identifier>
   </rdf:Description>
 </rdf:RDF>

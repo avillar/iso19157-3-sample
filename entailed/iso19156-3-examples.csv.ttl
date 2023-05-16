@@ -1,4 +1,4 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix policy: <http://www.opengis.net/def/metamodel/ogc-na/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,53 +7,53 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/entailed/iso19156-3-examples.csv.ttl> a prov:Entity ;
-    dct:format "text/turtle" ;
-    dct:hasVersion "git:9ebe39c85a51ec894353b384ec94d72843a4a642" ;
-    prov:wasAttributedTo _:N68b03397c0424781896f43c535fd2c84 ;
+    dcterms:format "text/turtle" ;
+    dcterms:hasVersion "git:e494f473b6f607d16bc1af947c06c0a85287c1cc" ;
+    prov:wasAttributedTo _:N3f3c3d4485d640fdb601b8204a7ecbd4 ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "Entailment and validation" ;
             rdfs:comment "python ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status --base-uri https://raw.githubusercontent.com/avillar/iso19157-3-sample/master --update --graph-store http://defs-dev.opengis.net:8061/fuseki-hosted/data" ;
-            prov:endedAtTime "2023-05-16T07:22:50.112130"^^xsd:dateTime ;
-            prov:startedAtTime "2023-05-16T07:22:47.430153"^^xsd:dateTime ;
+            prov:endedAtTime "2023-05-16T11:44:01.528354"^^xsd:dateTime ;
+            prov:startedAtTime "2023-05-16T11:43:58.635098"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl> ],
-                [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:9ebe39c85a51ec894353b384ec94d72843a4a642" ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:e494f473b6f607d16bc1af947c06c0a85287c1cc" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/.ogc/catalog.ttl> ],
-                [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl> ],
-                [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/skos_vocprez.shapes.ttl> ],
                 [ a prov:Entity ;
                     rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/vocprez.shapes.ttl> ],
                 [ a prov:Entity ;
-                    dct:format "text/turtle" ;
-                    dct:hasVersion "git:9ebe39c85a51ec894353b384ec94d72843a4a642" ;
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/ogc_skos_profile_entailments.ttl> ],
+                [ a prov:Entity ;
+                    dcterms:format "text/turtle" ;
+                    dcterms:hasVersion "git:e494f473b6f607d16bc1af947c06c0a85287c1cc" ;
                     rdfs:seeAlso <https://raw.githubusercontent.com/avillar/iso19157-3-sample/master/iso19156-3-examples.csv.ttl> ],
                 [ a prov:Entity ;
-                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl> ] ;
-            prov:wasAssociatedWith _:N68b03397c0424781896f43c535fd2c84 ;
-            prov:wasInformedBy [ dct:identifier "2df047f4-4f60-4d5c-befc-1381899891ed" ] ] .
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/definitions/profiles/resources/skos_shared_shacl.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/skosbasics.shapes.ttl> ],
+                [ a prov:Entity ;
+                    rdfs:seeAlso <http://defs-dev.opengis.net/ogc-na/scripts/skos_vocprez.shapes.ttl> ] ;
+            prov:wasAssociatedWith _:N3f3c3d4485d640fdb601b8204a7ecbd4 ;
+            prov:wasInformedBy [ dcterms:identifier "7a0be2ae-8343-42ba-9eae-df9c277e348a" ] ] .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/101> a skos:Concept ;
-    dct:description "The measure will take the  value true if all the requirements in the referred data product specification are fulfilled" ;
-    dct:version "1.0" ;
+    dcterms:description "The measure will take the  value true if all the requirements in the referred data product specification are fulfilled" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:definition "indication that all requirements in the referred data product specification are fulfilled" ;
     skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
     skos:prefLabel "data product specification passed" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/102> a skos:Concept ;
-    dct:version "1.0" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:definition "number of data product specification requirements that are not fulfilled by the current product/dataset" ;
     skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
     skos:prefLabel "data product specification fail count" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/11> a skos:Concept ;
-    dct:description "Which surfaces may overlap and which shall not is application dependent. Not all overlapping surfaces are necessarily erroneous. When reporting this data quality measure, the types of feature classes corresponding to the illegal overlapping surfaces shall be reported as well. See also: https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/204" ;
-    dct:version "1.0" ;
+    dcterms:description "Which surfaces may overlap and which shall not is application dependent. Not all overlapping surfaces are necessarily erroneous. When reporting this data quality measure, the types of feature classes corresponding to the illegal overlapping surfaces shall be reported as well. See also: https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/204" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:altLabel "overlapping surfaces" ;
     skos:definition "total number of erroneous overlaps within the data" ;
@@ -62,8 +62,8 @@
     skos:prefLabel "number of invalid overlaps of surfaces" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/119> a skos:Concept ;
-    dct:description "The value true indicates physical structure conflict" ;
-    dct:version "1.0" ;
+    dcterms:description "The value true indicates physical structure conflict" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/retired> ;
     skos:definition "indication that items are stored in conflict with the physical structure of the dataset" ;
     skos:example "True (the dataset is stored in wrong file format, a shape file instead of gml)" ;
@@ -71,8 +71,8 @@
     skos:prefLabel "physical structure conflicts" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/12> a skos:Concept ;
-    dct:description "The value indicates number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset" ;
-    dct:version "1.0" ;
+    dcterms:description "The value indicates number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/draft> ;
     skos:definition "number of items in the dataset that are not compliant with the rules of the conceptual schema in relation to the total number of these items supposed to be in the dataset" ;
     skos:example "0,02 (in a test area there is 227 objects coded as living houses in the dataset but in the universe of discourse there are 231 objects that should be coded as living houses, 4 of them was coded as farm buildings)" ;
@@ -80,8 +80,8 @@
     skos:prefLabel "non-compliance rate with respect to the rules of the conceptual schema" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/14> a skos:Concept ;
-    dct:description "The value true indicates that an item is not in conformance with its value domain)" ;
-    dct:version "1.0" ;
+    dcterms:description "The value true indicates that an item is not in conformance with its value domain)" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:definition "indication of if an item is not in conformance with its value domain" ;
     skos:example "True – a feature with attribute colour has the value ‘blau’, but it does not exist in the specified value domain: red, green, blue, yellow" ;
@@ -89,8 +89,8 @@
     skos:prefLabel "value domain non-conformance" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/21> a skos:Concept ;
-    dct:description "A point-curve connection exists where different curves touch. These curves have an intrinsic topological relationship that shall reflect the true constellation. If the point-curve connection contradicts the universe of discourse, the point-curve connection is faulty with respect to this data quality measure. The data quality measure counts the number of errors of this kind." ;
-    dct:version "1.0" ;
+    dcterms:description "A point-curve connection exists where different curves touch. These curves have an intrinsic topological relationship that shall reflect the true constellation. If the point-curve connection contradicts the universe of discourse, the point-curve connection is faulty with respect to this data quality measure. The data quality measure counts the number of errors of this kind." ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:altLabel "extraneous nodes" ;
     skos:definition "number of faulty point-curve connections in the dataset" ;
@@ -99,9 +99,9 @@
     skos:prefLabel "number of faulty point-curve connections" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/4> a skos:Concept ;
-    dct:description "count of all items in the data that are incorrectly extracted with duplicate geometries" ;
-    dct:source "ISO/TS 19138 (modified)" ;
-    dct:version "1.0" ;
+    dcterms:description "count of all items in the data that are incorrectly extracted with duplicate geometries" ;
+    dcterms:hasVersion "1.0" ;
+    dcterms:source "ISO/TS 19138 (modified)" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:definition "total number of exact duplications of feature instances within the data" ;
     skos:example "Features with identical attribution and identical coordinates representing the same real object, for example: two (or more) points collected on top of each other, two (or more) curves collected on top of each other, or two (or more) surfaces collected on top of each other." ;
@@ -109,8 +109,8 @@
     skos:prefLabel "number of duplicate feature instances" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/47> a skos:Concept ;
-    dct:description "The true values of the observed coordinates X and Y are known as xt and yt. From this the estimator" ;
-    dct:version "2.0" ;
+    dcterms:description "The true values of the observed coordinates X and Y are known as xt and yt. From this the estimator" ;
+    dcterms:hasVersion "2.0" ;
     policy:status <http://www.opengis.net/def/status/superseded> ;
     skos:altLabel "RMSEP" ;
     skos:definition "radius of a circle around the given point, in which the true value lies with probability P" ;
@@ -119,18 +119,18 @@
     skos:prefLabel "root mean square error of planimetry" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/59> a skos:Concept ;
-    dct:description "The value indicates the probability for the true value of being within a lower and the upper limit of the interval." ;
-    dct:version "1.0" ;
+    dcterms:description "The value indicates the probability for the true value of being within a lower and the upper limit of the interval." ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:definition "half length of the interval defined by an upper and a lower limit, in which the true value for the time instance lies with probability 99,8 %" ;
     skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
     skos:prefLabel "time accuracy at 99,8 % significance level" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/62> a skos:Concept ;
-    dct:description """The misclassification matrix (MCM) is a quadratic matrix with n columns and n rows. n denotes the number of classes under consideration.
+    dcterms:description """The misclassification matrix (MCM) is a quadratic matrix with n columns and n rows. n denotes the number of classes under consideration.
 MCM (i,j) = [# items of class (i) classified as class (j)]
 The diagonal elements of the misclassification matrix contain the correctly classified items, and the off diagonal elements contain the number of misclassification errors.""" ;
-    dct:version "1.0" ;
+    dcterms:hasVersion "1.0" ;
     policy:status <http://www.opengis.net/def/status/valid> ;
     skos:altLabel "confusion matrix" ;
     skos:definition "matrix that indicates the number of items of class (i) classified as class (j)" ;
@@ -140,35 +140,35 @@ The diagonal elements of the misclassification matrix contain the correctly clas
 <http://www.opengis.net/def/entities/bodies/ogcna> a skos:Concept .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/> a skos:Collection ;
-    dct:provenance "Generated by the OGC Definitions Server to support integration of the elements of this ConceptScheme into bigger collections. ogc_skos_profile_entailements.ttl" ;
+    dcterms:provenance "Generated by the OGC Definitions Server to support integration of the elements of this ConceptScheme into bigger collections. ogc_skos_profile_entailements.ttl" ;
     skos:definition "Collection hierarchy for this ConceptScheme" ;
     skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
     skos:prefLabel "Concepts in ISO19157-3 quality measures" .
 
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> a skos:ConceptScheme ;
-    dct:source <http://www.opengis.net/def/entities/bodies/ogcna> ;
+    dcterms:source <http://www.opengis.net/def/entities/bodies/ogcna> ;
     policy:collectionView <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/> ;
     skos:definition "ISO19157-3 quality measures" ;
     skos:prefLabel "ISO19157-3 quality measures" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-16T07:22:46.410222"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-16T07:22:45.955053"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-16T11:43:57.671116"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-16T11:43:57.221475"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:9ebe39c85a51ec894353b384ec94d72843a4a642" ;
+            dcterms:format "application/json" ;
+            dcterms:hasVersion "git:e494f473b6f607d16bc1af947c06c0a85287c1cc" ;
             rdfs:seeAlso <file:///home/runner/work/iso19157-3-sample/iso19157-3-sample/iso19156-3-examples.csv.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.0.0" ;
+            dcterms:hasVersion "0.0.0" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "6daf785c-2736-40e6-b1bc-b426861a76ed" ] .
+    prov:wasInformedBy [ dcterms:identifier "cb7c5d96-3d57-47c8-8c6d-5ada21b9845e" ] .
 
-_:N68b03397c0424781896f43c535fd2c84 a prov:Agent,
+_:N3f3c3d4485d640fdb601b8204a7ecbd4 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.0.0" ;
+    dcterms:hasVersion "0.0.0" ;
     rdfs:comment "ogc.na.update_vocabs version 0.0.0" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
