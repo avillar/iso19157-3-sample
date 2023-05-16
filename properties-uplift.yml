@@ -30,7 +30,7 @@ context:
     Source reference: dct:source
     Example Text Description: skos:example
     Key: skos:editorialNote
-    Version: dct:version
+    Version: dct:hasVersion
     Status:
       '@id': policy:status
       '@type': '@id'
