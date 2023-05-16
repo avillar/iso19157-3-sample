@@ -68,6 +68,16 @@
     skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
     skos:prefLabel "number of faulty point-curve connections" .
 
+<https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/4> a skos:Concept ;
+    dct:description "count of all items in the data that are incorrectly extracted with duplicate geometries" ;
+    dct:source "ISO/TS 19138 (modified)" ;
+    dct:version "1.0" ;
+    policy:status <http://www.opengis.net/def/status/valid> ;
+    skos:definition "total number of exact duplications of feature instances within the data" ;
+    skos:example "Features with identical attribution and identical coordinates representing the same real object, for example: two (or more) points collected on top of each other, two (or more) curves collected on top of each other, or two (or more) surfaces collected on top of each other." ;
+    skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
+    skos:prefLabel "number of duplicate feature instances" .
+
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure/47> a skos:Concept ;
     dct:description "The true values of the observed coordinates X and Y are known as xt and yt. From this the estimator" ;
     dct:version "2.0" ;
@@ -97,30 +107,20 @@ The diagonal elements of the misclassification matrix contain the correctly clas
     skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
     skos:prefLabel "misclassification matrix" .
 
-<https://standards.isotc211.org/19157/-X/1/req/content/qualityMeasure/4> a skos:Concept ;
-    dct:description "count of all items in the data that are incorrectly extracted with duplicate geometries" ;
-    dct:source "ISO/TS 19138 (modified)" ;
-    dct:version "1.0" ;
-    policy:status <http://www.opengis.net/def/status/valid> ;
-    skos:definition "total number of exact duplications of feature instances within the data" ;
-    skos:example "Features with identical attribution and identical coordinates representing the same real object, for example: two (or more) points collected on top of each other, two (or more) curves collected on top of each other, or two (or more) surfaces collected on top of each other." ;
-    skos:inScheme <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> ;
-    skos:prefLabel "number of duplicate feature instances" .
-
 <https://standards.isotc211.org/19157/-3/1/req/content/qualityMeasure> a skos:ConceptScheme ;
     skos:prefLabel "ISO19157-3 quality measures" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-16T02:26:19.079143"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-16T02:26:18.619975"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-16T07:22:46.410222"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-16T07:22:45.955053"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:896dd6abb39e05ae1844c1c44ba862481c88da8f" ;
+            dct:hasVersion "git:9ebe39c85a51ec894353b384ec94d72843a4a642" ;
             rdfs:seeAlso <file:///home/runner/work/iso19157-3-sample/iso19157-3-sample/iso19156-3-examples.csv.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
             dct:hasVersion "0.0.0" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
-    prov:wasInformedBy [ dct:identifier "26589daf-6f41-4584-bc15-3ad9d055c3f7" ] .
+    prov:wasInformedBy [ dct:identifier "6daf785c-2736-40e6-b1bc-b426861a76ed" ] .
 
