@@ -1,7 +1,11 @@
-name: Download and uplift
+name: On push
 
 on:
   workflow_dispatch:
+    inputs:
+      changed-files:
+        description: Changed files for processing
+        type: string
   push:
     branches:
       - master
@@ -35,7 +39,8 @@ jobs:
           DB_USERNAME: admin
           DB_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
         run: |
-          echo Modified files: ${{ steps.changed-files.outputs.all_changed_files }}
+          MOD_FILES=${{ steps.changed-files.outputs.all_changed_files }},${{ inputs.changed-files }}
+          echo Changed files: ${MOD_FILES}
           find . -name '*.csv' | while read CSV_FILE; do python -m ogc.na.ingest_json \
             --skip-on-missing-context --json-ld --context csv2python.yml "${CSV_FILE}" > "${CSV_FILE}.json"
           done
@@ -43,10 +48,14 @@ jobs:
             --json-ld --ttl --work-dir . --domain-config .ogc/catalog.ttl
           python -m ogc.na.ingest_json --batch --skip-on-missing-context \
             --json-ld --ttl --work-dir . --domain-config .ogc/catalog.ttl \
-            ${{ steps.changed-files.outputs.all_changed_files }}
+            ${MOD_FILES}
           python -m ogc.na.update_vocabs -w . .ogc/catalog.ttl --use-git-status \
             --base-uri https://raw.githubusercontent.com/${{github.repository}}/${{github.ref_name}} \
             --update --graph-store http://defs-dev.opengis.net:8061/fuseki-hosted/data
+          python -m ogc.na.update_vocabs -w . .ogc/catalog.ttl \
+            --base-uri https://raw.githubusercontent.com/${{github.repository}}/${{github.ref_name}} \
+            --update --graph-store http://defs-dev.opengis.net:8061/fuseki-hosted/data \
+            -m ${MOD_FILES}
       - name: Add and commit
         uses: EndBug/add-and-commit@v9
         with:
